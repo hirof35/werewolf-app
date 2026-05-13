@@ -51,3 +51,4 @@ README の活用法
 VS Code でプレビュー: README.md を開いた状態で Ctrl + Shift + V を押すと、実際の見栄えを確認できます。
 
 ポートフォリオに: このファイルがあるだけで、立派な「作品」としての説得力が一気に増しますよ！
+<img width="1918" height="987" alt="image" src="https://github.com/user-attachments/assets/ecea6c6e-cc8f-4835-baee-77b3fb3977cc" />
