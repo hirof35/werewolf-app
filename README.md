@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+WEREWOLF ULTIMATE (ウェレウルフ・アルティメット)
+React と Vite で構築された、シンプルで直感的なブラウザベースの人狼ゲーム・シミュレーターです。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📋 概要
+このアプリは、プレイヤーが「占い師」となり、NPC（じろう、さぶろう等）と共に人狼を見つけ出すゲームです。リアルタイムなログ更新と、各プレイヤーへの推理メモ機能を備えています。
 
-Currently, two official plugins are available:
+🚀 技術スタック
+Frontend: React 18+
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Build Tool: Vite
 
-## React Compiler
+Styling: Tailwind CSS (v4対応)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Language: TypeScript
 
-## Expanding the ESLint configuration
+🕹️ 遊び方
+準備フェーズ: 画面中央の「ゲーム開始」ボタンをクリックします。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+夜フェーズ: あなたは「占い師」として、生存しているプレイヤーの中から一人を選んで占うことができます。
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+朝フェーズ: 昨晩の犠牲者が発表されます。
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+議論フェーズ: 占いの結果やこれまでの流れから人狼を推理します。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+各プレイヤーの横にある「推理メモ/共有」ボタンから、自分だけのメモを残したり、全体ログに推理を共有したりできます。
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+勝利条件:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+村人側: 全ての人狼を排除する。
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+人狼側: 人狼の数が村人の数以上になる、または7日間生き延びる。
+
+🛠️ セットアップと実行方法
+1. 依存関係のインストール
+Bash
+npm install
+2. 開発サーバーの起動
+Bash
+npm run dev
+起動後、ブラウザで http://localhost:5173 (または表示されたURL) にアクセスしてください。
+
+📁 フォルダ構成
+src/App.tsx: ゲームのメインロジックとUI（これ1つで完結しています）。
+
+src/index.css: Tailwind CSS のベース設定。
+
+📝 ライセンス
+MIT License
+
+README の活用法
+VS Code でプレビュー: README.md を開いた状態で Ctrl + Shift + V を押すと、実際の見栄えを確認できます。
+
+ポートフォリオに: このファイルがあるだけで、立派な「作品」としての説得力が一気に増しますよ！
